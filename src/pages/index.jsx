@@ -42,13 +42,13 @@ const container = css`
     }
   }
 
-  ul {
+  .section ul {
     margin-top: 0.5rem;
     margin-left: 2.5rem;
     list-style: disc;
   }
 
-  li {
+  .section li {
     margin-bottom: 0.5rem;
   }
 
@@ -65,6 +65,19 @@ const container = css`
     padding-top: 2rem;
     padding-bottom: 0.5rem;
   }
+
+  .skills ul {
+    display: flex;
+    margin-top: 2rem;
+  }
+
+  .skills li {
+    margin-bottom: 1rem;
+    margin-right: 0.5rem;
+    padding: 0.25rem 1rem;
+    background-color: #f1f5f7;
+    white-space: nowrap;
+  }
 `
 
 const htmlToReactParser = new Parser()
@@ -74,15 +87,27 @@ export default props => {
   const content = data.prismicHomepage.data
   const name = content.name.text
   const description = content.description.html
+
   const sections = content.body.map(section => {
     const title = section.primary.title.text
     const items = section.items.map(item => htmlToReactParser.parse(item.content.html))
-    return (
-      <div>
-        <h2>{title}</h2>
-        <div>{items}</div>
-      </div>
-    )
+
+    if (section.slice_type === 'section') {
+      return (
+        <div className="section">
+          <h2>{title}</h2>
+          <div>{items}</div>
+        </div>
+      )
+    }
+    if (section.slice_type === 'skills') {
+      return (
+        <div className="skills">
+          <h2>{title}</h2>
+          <div>{items}</div>
+        </div>
+      )
+    }
   })
 
   return (
@@ -107,14 +132,30 @@ export const pageQuery = graphql`
           html
         }
         body {
-          primary {
-            title {
-              text
+          ... on PrismicHomepageBodySection {
+            slice_type
+            primary {
+              title {
+                text
+              }
+            }
+            items {
+              content {
+                html
+              }
             }
           }
-          items {
-            content {
-              html
+          ... on PrismicHomepageBodySkills {
+            slice_type
+            primary {
+              title {
+                text
+              }
+            }
+            items {
+              content {
+                html
+              }
             }
           }
         }
