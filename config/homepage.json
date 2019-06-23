@@ -1,0 +1,85 @@
+{
+  "Main": {
+    "name": {
+      "type": "StructuredText",
+      "config": {
+        "single": "heading1, heading2, heading3, heading4, heading5, heading6",
+        "label": "Name",
+        "placeholder": "Name"
+      }
+    },
+    "description": {
+      "type": "StructuredText",
+      "config": {
+        "multi": "paragraph",
+        "label": "description",
+        "placeholder": "Enter description here",
+        "labels": ["grey"]
+      }
+    },
+    "body": {
+      "type": "Slices",
+      "fieldset": "Slice zone",
+      "config": {
+        "choices": {
+          "section": {
+            "type": "Slice",
+            "fieldset": "Section",
+            "description": "Section",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Title",
+                  "placeholder": "Title of the section"
+                }
+              }
+            },
+            "repeat": {
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, embed, list-item",
+                  "allowTargetBlank": true,
+                  "label": "Content",
+                  "labels": ["grey", "headline"]
+                }
+              }
+            }
+          },
+          "skills": {
+            "type": "Slice",
+            "fieldset": "Skills",
+            "description": "Skills",
+            "icon": "face",
+            "display": "list",
+            "non-repeat": {
+              "title": {
+                "type": "StructuredText",
+                "config": {
+                  "single": "heading2",
+                  "label": "Title",
+                  "placeholder": "Title of skills section"
+                }
+              }
+            },
+            "repeat": {
+              "content": {
+                "type": "StructuredText",
+                "config": {
+                  "multi": "paragraph, hyperlink, list-item",
+                  "allowTargetBlank": true,
+                  "label": "Content",
+                  "labels": ["grey", "headline"]
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
