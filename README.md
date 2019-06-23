@@ -40,6 +40,6 @@ Feel free to Subscribe too :heart:
 - [Thanks to Ryan Tsao for the styling of link tags inspiration](https://ryantsao.com/blog/virtual-css-with-styletron)
 
 ## Socials
-Twitter: https://twitter.com/deamlabs
-YouTube: https://www.youtube.com/user/DeamMe
-SoundCloud: https://soundcloud.com/deam
+- Twitter: https://twitter.com/deamlabs
+- YouTube: https://www.youtube.com/user/DeamMe
+- SoundCloud: https://soundcloud.com/deam
