@@ -42,7 +42,7 @@
               "content": {
                 "type": "StructuredText",
                 "config": {
-                  "multi": "paragraph, embed, list-item",
+                  "multi": "paragraph, hyperlink, list-item",
                   "allowTargetBlank": true,
                   "label": "Content",
                   "labels": ["grey", "headline"]
