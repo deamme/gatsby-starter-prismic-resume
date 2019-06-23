@@ -5,6 +5,8 @@ https://www.youtube.com/watch?v=9eCOcJZR578&list=PLy3RjrA8UIYJZ08w6bmSDNX10ysI8J
 
 Feel free to Subscribe too :heart:
 
+[Preview site (deployed with Netlify)](https://compassionate-morse-5204bf.netlify.com/)
+
 ## Guide
 ### Project setup
 - Fork this repo and clone it to your computer
