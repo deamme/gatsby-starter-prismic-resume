@@ -14,8 +14,12 @@ Feel free to Subscribe too :heart:
 - Go to Prismic and get your API KEY - Watch https://youtu.be/2hCm0RwQrWU?list=PLy3RjrA8UIYJZ08w6bmSDNX10ysI8JuDk&t=130
 - Copy and paste it into the newly created file - should look something like `API_KEY=PC5XSkxWNMJBQURLbkFCbFFn...`
 
+### Prismic repo setup
+- Create a new Prismic repository
+- Go to `gatsby-config.js` file and edit the value of `repositoryName` to your Prismic repo name
+
 ### Prismic custom types
-- Create a new custom type called `Homepage`
+- Create a new single custom type called `Homepage`
 - Go to `config/homepage.json` in your project and copy everything in that file
 - Go to your newly created custom type and paste everything into the JSON Editor on the right side
 
