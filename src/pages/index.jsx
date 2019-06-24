@@ -6,8 +6,7 @@ import Layout from '../components/Layout'
 
 const container = css`
   margin: 0 auto;
-  padding-top: 4rem;
-  padding-bottom: 8rem;
+  padding: 4rem 2rem 8rem 2rem;
   max-width: 600px;
   color: #333333;
 
@@ -68,6 +67,7 @@ const container = css`
 
   .skills ul {
     display: flex;
+    flex-wrap: wrap;
     margin-top: 2rem;
   }
 
